@@ -1,3 +1,7 @@
+jvr_user:
+    resource: "@JVRUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
