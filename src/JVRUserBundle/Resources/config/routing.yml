@@ -1,3 +1,19 @@
-jvr_user_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: JVRUserBundle:Default:index }
+jvr_user_index:
+    path:     /user/index
+    defaults: { _controller: JVRUserBundle:User:index }
+
+jvr_user_add:
+    path:     /user/add
+    defaults: { _controller: JVRUserBundle:User:add }
+
+jvr_user_edit:
+    path:     /user/edit/{id}
+    defaults: { _controller: JVRUserBundle:User:edit }
+
+jvr_user_view:
+    path:     /user/view/{id}
+    defaults: { _controller: JVRUserBundle:User:view }
+
+jvr_user_delete:
+    path:     /user/delete/{id}
+    defaults: { _controller: JVRUserBundle:User:delete }
