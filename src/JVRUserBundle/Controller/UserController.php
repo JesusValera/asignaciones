@@ -15,15 +15,22 @@ class UserController extends Controller
 
         $users = $em->getRepository("JVRUserBundle:User")->findAll();
 
-        // Mostrar datos.
-        $res = 'Lista de usuarios: <br/>';
-        /** @var User $user */
-        foreach ($users as $user)
-        {
-            $res .= 'Usuario: ' . $user->getUsername() . ' - Email: ' . $user->getEmail() . '<br/>';
-        }
+//        // Video 5 - ORM Doctrine.
+//        //Mostrar datos.
+//        $res = 'Lista de usuarios: <br/>';
+//        /** @var User $user */
+//
+//        foreach ($users as $user)
+//        {
+//            $res .= 'Usuario: ' . $user->getUsername() . ' - Email: ' . $user->getEmail() . '<br/>';
+//        }
+//
+//        return new Response($res);
 
-        return new Response($res);
+        // Video 6 - Twig.
+
+        return $this->render('JVRUserBundle:User:index.html.twig', ['users' => $users]);
+
     }
 
     public function viewAction($id)
