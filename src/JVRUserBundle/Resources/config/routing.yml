@@ -6,6 +6,11 @@ jvr_user_add:
     path:     /user/add
     defaults: { _controller: JVRUserBundle:User:add }
 
+jvr_user_create:
+    path:     /user/create
+    defaults: { _controller: JVRUserBundle:User:create }
+    methods: POST
+
 jvr_user_edit:
     path:     /user/edit/{id}
     defaults: { _controller: JVRUserBundle:User:edit }
